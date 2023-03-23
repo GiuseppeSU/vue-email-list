@@ -4,8 +4,7 @@ createApp({
   data() {
     return {
       stampaEmail:[],
-      finish:false
-    }
+     }
   
   },
   methods: {
@@ -16,11 +15,7 @@ createApp({
         axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
         .then( (response) => {
                 this.stampaEmail.push(response.data.response);
-                if(this.stampaEmail.length == 10){
-                    this.finish = true
-
-                }
-            }
+              }
         );
 
     }
